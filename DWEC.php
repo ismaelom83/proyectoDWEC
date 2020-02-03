@@ -16,12 +16,8 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <title>Ismael Heras Salvador</title>
     </head>
-
-
     <body>
-
         <header>
-
             <nav class="navbar navbar-expand-sm navbar-light load-hidden"  style="background-color: #e3f2fd;">
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,10 +37,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../proyectoDIW/DIW.php">DIW</a>
                     </ul >
-
                 </div>
             </nav>
-
             <h1 class=" h1">
                 Desarrollo Web en el entorno del cliente<br>
                 <small class="text-muted">Ismael Heras Salvador</small>
@@ -104,8 +98,20 @@
                         </div>
                     </div>
                     
-                    
-                    
+                    <div class="card">
+                        <a href="proyectos/tema6/tema6.php"><img src="../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="proyectos/tema6/tema6.php" class="text-decoration-none"> <h5 class="card-title">Ejercicios tema 6</h5></a>
+                            <a href="proyectos/tema6/tema6.php" class="text-decoration-none"><p class="card-text">Ejercicios de manejo de l alibreria de javascript jquery.</p></a>
+                        </div>
+                    </div>
+                        <div class="card">
+                            <a href="proyectos/tema7/tema7.php"><img src="../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="proyectos/tema7/tema7.php" class="text-decoration-none"> <h5 class="card-title">Ejercicios tema 7</h5></a>
+                            <a href="proyectos/tema7/tema7.php" class="text-decoration-none"><p class="card-text">Tema de manejo e datos con javascript</p></a>
+                        </div>
+                    </div>
                 </div> 
 
             </div>

@@ -6,9 +6,6 @@
     font-family: 'Pacifico', cursive;
 }
 
-html.sr .load-hidden{
-    visibility: hidden;
-}
 .navbar-brand{
     font-size: 36px; 
 }
@@ -22,17 +19,43 @@ html.sr .load-hidden{
     margin-left: 30px;
    
 }
-
+main{
+ margin-bottom: 120px;
+ 
+}
+.i2{
+    text-align: right;
+}
 .h1{
     text-align: right;
     margin-right: 300px;
+    margin-top: 100px;
+}
+.negrita{
+    font-size: 16px;
+    color: red;
+}
+
+.card{
+    width: 100%;
 }
 
 .div-navegador{
     color: #503D39;
 }
+.container{
+    width: 100%;
+}
+
+.card > a > img{
+    width: 220px;
+    height: 200px;
+}
 
 
+.card-deck{
+    width: 100%;
+}
 .card-text{
     font-size: 18px;
     color:black;
@@ -43,6 +66,19 @@ html.sr .load-hidden{
     color:brown;
 }
 
+.htmlCss{
+     margin-left: 250px; 
+     margin-right: 150px;
+    font-size: 16px;
+    color: #025877;
+}
+.titulo{
+     margin-left: 250px; 
+    font-size: 24px;
+    color: red;
+}
+
+
 footer {
   background-color: #e3f2fd;
   position: fixed;
@@ -52,3 +88,4 @@ footer {
   color:black;
   font-size: 24px;
 }
+
