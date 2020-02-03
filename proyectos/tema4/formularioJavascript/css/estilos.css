@@ -1,0 +1,49 @@
+.form-control{
+    width: 90%;
+    
+}
+
+#color{
+    width: 33%;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.secundario{ 
+    width: 33%;
+    display: inline-block;
+    border: dotted 2px grey;
+    padding: 20px; 
+    border-radius: 20px;
+}
+fieldset{
+    width: 100%;
+    display: inline-block;
+    border: solid 2px blue;
+    padding: 15px; 
+    border-radius: 10px;
+}
+
+.wrap{
+    width: 90%;
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+legend {
+    max-width: 30%;
+    text-align: center;
+    font-size: 36px;
+    color: brown;
+}
+
+.botones input{
+    width: 100%;  
+}

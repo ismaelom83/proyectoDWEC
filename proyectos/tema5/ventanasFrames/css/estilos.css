@@ -1,0 +1,30 @@
+
+div{
+    display: inline-block;
+    width: 33%;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+    padding: 50px;      
+}
+
+#div1{
+    background-color:  red;
+}
+#div2{
+    background-color:   blue;
+}
+#div3{
+    background-color:  pink;
+}
+#div4{
+    background-color:  brown;
+}
+#div5{
+    background-color:  purple;
+}
+#div6{
+    background-color:  yellow;
+}
+

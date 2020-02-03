@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="estilos.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="titulo">Matricula del curso</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Oferta educativa</li>
+                <li>Tutoriares</li>
+                <li>Horarios</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+        <img src="images.jfif" alt="foto">
+        
+        <form action="">  
+            <fieldset>
+                <legend>datos personales</legend>
+                
+                <label for="nombre">nombre</label><br>
+                <input type="text" id="nombre" value="escribe el nombre"><br>
+                <label for="apellidos">apellidos:</label><br>
+                <input type="text" id="apellidos" value="escribe el apellido"><br>
+                <label for="correo">correo electronico</label><br>
+                <input type="email" id="correo" value="escribe el correo electronico"><br>
+                <label for="fecha">fecha de nacimiento</label><br>
+                <input type="email" id="fecha" value="dd/mm/aaaa"> <br>          
+            </fieldset>
+            <fieldset>
+                <legend>Matricula</legend>
+                ¿De que te matriculas?<br>
+                <input type="radio" value="1ºcurso" name="curso" id="1"><label for="1">1ªCurso</label><br>
+                <input type="radio" value="2ºcurso" name="curso" id="2"><label for="2">2ªCurso</label><br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+
+
+        <table border="1">
+            <tr>
+                <th>Curso</th>
+                <th>Asignaturas</th>
+            </tr>
+            <tr>
+                <td>1ªCurso</td>
+                <td>
+                    <ul class="lista">
+                        <li>Redes Locales</li>
+                        <li>Sistemas Operativos</li>
+                        <li>Aplicaciones WEB</li>
+                        <li>Ofimatica</li>
+                        <li>FOL</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+
+                <td>2ªCurso</td>
+                <td>
+                    <ul class="lista">
+                        <li>Montaje y Mantenimiento</li>
+                        <li>Sistemas Operativos de Red</li>
+                        <li>Servicios</li>
+                        <li>Seguridad</li>
+                        <li>Empresa</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+        <footer>
+            <p>Si pulsas en la imagen te lleva  a la WEB  del centro</p>
+            <br>
+            <p class="p2">Contacto del centro</p>
+            <br>
+            <p class="p2">Av.  Federico Silva, 48 49600 Benavente, Zamora</p>
+        </footer>
+    </body>
+</html>

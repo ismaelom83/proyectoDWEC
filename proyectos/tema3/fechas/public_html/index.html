@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>manejo de fechas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+           //fecha actual
+            var fecha = new Date();            
+            console.log(fecha);
+            
+            //fecha epoca
+            var fecha1 = new Date(0);
+            console.log(fecha1);            
+             fecha1 = new Date(365*24*60*60*1000);
+            console.log(fecha1);
+            
+            //cumpleaños de nacho
+            //los meses empiezan con el cero.
+           var fecha2 = new Date(1996,11,26,16,30);
+           console.log(fecha2);
+           
+           //fecha con string
+            fecha2 = new Date("Nov 26,1996 16:30:06");
+           console.log(fecha2);
+           
+           //cambio dia
+           fecha2.setDate(20);
+          console.log(fecha2);
+           
+          //cambio de mes O-11
+           fecha2.setMonth(5);
+           console.log(fecha2);
+           
+           //cambio de año
+           fecha2.setFullYear(1998);
+           console.log(fecha2);
+           
+           //cambbio de hora
+           fecha2.setHours(20);
+           console.log(fecha2);
+           
+           //cambio de minutos//           
+           fecha2.setMinutes()(20);
+           console.log(fecha2);
+           
+           //cambio de segundos
+           fecha2.setSeconds()(20);
+           console.log(fecha2);
+           
+           //cambiar el valor de la fecha teniendo miles 
+           fecha2.setTime(12121231233);
+           console.log(fecha2);
+           
+           //milis desde hoy       
+          var  fecha11 = new Date();
+           console.log(fecha11.setTime());
+           
+           //SABER EL DIA DE LA SEMANA.
+           fecha12 = new Date();
+           fecha.setDate(6);
+           console.log(fecha12+","+fecha12.getDay());
+           
+           //los años que han pasado de3sde una fecha.
+           //coger la fecha actual y la fecha cero y restarlo
+           
+           var f1 = new Date();//actual
+           var f2 = new Date(0);//la fecha cero
+           
+           console.log(f1.getFullYear()-f2.getFullYear());
+           
+           //cogemos en los milis y lo pasamos a años.
+           
+           var diferencia = f1.getTime() - f2.getTime();
+           console.log(Math.floor(diferencia/1000/365/3600/24));
+           
+           //formatear date.parse pasa string a numero.
+           //esto combierte la fecha en milisegundos(timestam en PHP).
+           console.log("PARSE");
+           var milis = Date.parse("10-10-2019 11:41:02");
+           console.log(milis);
+           console.log(typeof(milis)+ " "+milis);
+           fecha4 = new Date(milis);
+           console.log(fecha4);
+           
+           //con letra
+           var milis = Date.parse("OCT 10,2019 12:30 PM")
+            console.log(milis);
+           console.log(typeof(milis)+ " "+milis);
+           fecha4 = new Date(milis);
+           console.log(fecha4);
+           
+           //mostrar fecha.
+            f1 = new Date();//actual
+            console.log(f1);
+            console.log(f1.toString());
+            console.log(f1.toLocaleString());
+            console.log(f1.toDateString());
+            console.log(f1.toLocaleDateString());
+            console.log(f1.toLocaleTimeString());
+            
+            //UTC
+            console.log(f1.toUTCString());
+            var opciones = {weekday: "long", year : "numeric", month: "long", day : "numeric" }
+            console.log(f1.toLocaleString("es-ES", opciones));
+           
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

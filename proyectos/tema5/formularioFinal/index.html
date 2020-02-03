@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+        <title>Ejercicio formularioFinal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css" id="css">
+        <script src="js/validacion.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <form action="bien.html" accept-charset="UTF-8" name="formularioIsmael" id="formularioIsmaelFinal"
+                  enctype="application/x-www-form-urlencoded" onsubmit=" return validar()">
+                <fieldset>
+                    <legend>Formulario Alumno</legend>                                                                 
+                    <label for="select" id="selectoropciones">Ciclo</label><br>
+                    <select name="select" id="select1">
+                        <option value="ninguno">Selecicone una opcion</option>
+                        <option value="Opcion1">SMR</option>  
+                        <option value="Opcion2">DAW</option>  
+
+                    </select>
+                    <br>
+                    <br>
+                    <label for="select" id="selectoropciones">Curso</label><br>
+                    <select name="select" id="select2">
+                        <option value="ninguno">Selecicone una opcion</option>
+                        <option value="Opcion1">Curso1</option>  
+                        <option value="Opcion2">Curso2</option>      
+                    </select>
+                    <br>
+                    <br>
+                    <label for="checkbox" class="checkBox">Asignaturas que estas cursando:</label><br>
+                  
+                    <br>                 
+                    <div class="botones">
+                        <input type="submit" value="REGISTRARSE" id="boton" class="form-control  btn btn-secondary mb-1" disabled>
+                        <br>
+                        <input type="reset" value="LIMPIAR" class="form-control  btn btn-danger">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+        <script src="js/carga.js"></script>
+    </body>
+
+</html>

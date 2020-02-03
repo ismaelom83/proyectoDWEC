@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Ejercicio formulario14</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="validarFomularios.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css" id="css">
+    <script src="js/validacion.js"></script>
+</head>
+
+<body>
+    <h1>Formulario De Ismael</h1>
+    <div class="wrap">
+        <form action="bien.html" accept-charset="UTF-8" name="formularioIsmael" id="formularioIsmael"
+            enctype="application/x-www-form-urlencoded" onsubmit=" return validar()">
+            <fieldset>
+                <legend>Formulario</legend>               
+                    <label for="nombre" class="">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" value="" class="form-control "
+                        placeholder="Escribe Nombre:">
+                    <br>
+                    <label for="apellidos" class="">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="form-control "
+                        value="" placeholder="Escribe Apellidos:">
+                    <br>                  
+                    <label for="email" class="">EMAIL:</label>
+                    <input type="email" name="email" id="email" class="form-control " value=""
+                        placeholder="Escribe EMAIL:">                   
+                    <br>       
+                    <br>  
+                    <label for="radio">Elije Sexo</label><br>
+                    <input type="radio" name="sexo" value="" id="masculino" checked>
+                    <label for="masculino">masculino</label>
+                    <input type="radio" name="sexo" value="" id="femenino">
+                    <label for="femenino">femenino</label>
+                   
+                    <br><br>
+                    <label for="checkbox" class="checkBox">Aficiones:</label><br>
+                    <input type="checkbox" id="viajes" name="viajes" value="viajes" >
+                    <label for="viajes" class="">viajes</label>
+                    <input type="checkbox" id="deportes" name="deportes" value="deportes">
+                    <label for="deportes" class="">deportes</label>  
+                    <input type="checkbox" id="cine" name="cine" value="cine" >
+                    <label for="cine" class="">cine</label>
+                    <input type="checkbox" id="libros" name="libros" value="libros" >
+                    <label for="libros" class="">libros</label>
+                    <br>
+                    <input type="checkbox" id="musica" name="musica" value="musica" >
+                    <label for="musica" class="">musica</label>
+                    <input type="checkbox" id="automoviles" name="automoviles" value="automoviles" >
+                    <label for="automoviles" class="">automoviles</label>
+                    <input type="checkbox" id="videojuegos" name="videojuegos" value="videojuegos" >
+                    <label for="videojuegos" class="">videojuegos</label>
+                    <br>
+                    <input type="checkbox" id="gastronomia" name="gastronomia" value="gastronomia" >
+                    <label for="gastronomia" class="">gastronomia</label>
+                    <input type="checkbox" id="belleza" name="belleza" value="belleza" >
+                    <label for="belleza" class="">belleza</label>
+                    <input type="checkbox" id="tecnologia" name="tecnologia" value="tecnologia" >
+                    <label for="tecnologia" class="">tecnologia</label>             
+                                 
+                <br>
+                <br>
+                <div class="botones">
+                    <input type="submit" value="ENVIAR" class="form-control  btn btn-secondary mb-1">
+                    <br>
+                    <input type="reset" value="BORRAR" class="form-control  btn btn-danger">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

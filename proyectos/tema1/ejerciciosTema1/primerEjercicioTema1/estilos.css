@@ -1,0 +1,76 @@
+
+*{
+    background: grey;
+}
+.titulo{
+    color: blue;
+    text-align: center;
+}
+header{
+    border-bottom: 5px dotted #890236;
+}
+nav>ul>li{
+    padding-top: 7px; 
+    width: 18%;
+    height: 30px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    background: #890236; 
+}
+
+
+img{
+    height: 250px;
+    margin: 20px 20px 20px 20px;
+    float: left;
+}
+/*.formulario{
+    background: blue;
+    border-radius: 50px;
+}*/
+form{
+    border: 20px solid #025877;
+    background: #025877;
+    margin: 20px 20px 20px 20px;
+    display: block;
+    float: left;
+    border-radius: 50px;
+}
+fieldset{
+    
+    background: #025877;
+}
+figcaption{
+    background: white;
+}
+input {
+    background: white;
+}
+label, legend{
+    background: none;
+    color: black;
+}
+table{
+/*  width: 300px;  
+  height: 100px;*/
+    margin: 20px 20px 20px 20px;
+/*   display: block;*/
+    float: left;
+}
+
+ td{
+    background: #890236;
+}
+ th{
+    background: #890236;
+}
+.lista, li{
+    background: #890236;
+}
+footer{
+    clear: both;
+}
+.p2{
+    text-align: center;
+}

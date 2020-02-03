@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Ejercicio formularioFinal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css" id="css">
+    <script src="js/validacion.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+            <div class="alumno-profesor">
+                    <input type="submit" value="ALAUMNO" id="alumno" class="form-control  btn btn-primary mb-1" >
+               
+                    <input type="submit" value="PROFESOR" id="profesor"  class="form-control  btn btn-light">
+                </div>
+        <form action="bien.html" accept-charset="UTF-8" name="formularioIsmael" id="formularioIsmaelFinal"
+            enctype="application/x-www-form-urlencoded" onsubmit=" return validar()">
+            <fieldset>
+                <legend>Formulario Alumno</legend>               
+                    <label for="nombre" class="">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" value="" class="form-control "
+                        placeholder="Escribe Nombre:">
+                    <br>
+                    <label for="apellidos" class="">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="form-control "
+                        value="" placeholder="Escribe Apellidos:">
+                    <br>                  
+                    <label for="dni" class="">DNI:</label>
+                    <input type="text" name="dni" id="dni" value="" class="form-control " placeholder="Escribe DNI:">                  
+                    <br>       
+                                                    
+                    <label for="select" id="selectoropciones">Ciclo</label><br>
+                    <select name="select" id="select1">
+                            <option value="ninguno">Selecicone una opcion</option>
+                            <option value="Opcion1">SMR</option>  
+                            <option value="Opcion2">DAW</option>  
+                                
+                         </select>
+                         <br>
+                         
+                         <label for="select" id="selectoropciones">Curso</label><br>
+                    <select name="select" id="select2">
+                            <option value="ninguno">Selecicone una opcion</option>
+                            <option value="Opcion1">Curso1</option>  
+                            <option value="Opcion2">Curso2</option>      
+                         </select>
+                         <br>
+                         <br>
+                         <label for="email" class="">EMAIL:</label>
+                    <input type="email" name="email" id="email" class="form-control " value=""
+                        placeholder="Escribe EMAIL:">
+                    <br>
+                    <label for="textArea" id="alfa">Mensaje:</label><br>
+                    <textarea name="textarea" rows="3" cols="40" id="textArea" placeholder="Escribe un Mensaje"></textarea>
+                    <br>
+                    
+                    <input type="checkbox" id="opcion1" name="opcion1" value="opcion1" >
+                    <label for="opcion1" class="">Acepto las condiciones de la LPD</label>
+                    <br>
+                <div class="botones">
+                    <input type="submit" value="REGISTRARSE" id="boton" class="form-control  btn btn-secondary mb-1" disabled>
+                    <br>
+                    <input type="reset" value="LIMPIAR" class="form-control  btn btn-danger">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="wrap2" id="wp" >
+        <form action="bien.html" accept-charset="UTF-8" name="formularioIsmael2" id="formularioIsmaelFinal2"
+            enctype="application/x-www-form-urlencoded"  onsubmit=" return validar()">
+            <fieldset>
+                <legend>Formulario Profesor</legend>               
+                    <label for="nombre" class="">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" value="" class="form-control "
+                        placeholder="Escribe Nombre:">
+                    <br>
+                    <label for="apellidos" class="">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="form-control "
+                        value="" placeholder="Escribe Apellidos:">
+                    <br>                  
+                    <label for="dni" class="">DNI:</label>
+                    <input type="text" name="dni" id="dni" value="" class="form-control " placeholder="Escribe DNI:">                  
+                    <br>       
+                                                    
+                    <label for="select" id="selectoropciones" size="2">Ciclo</label><br>
+                    <select name="select" id="select1">
+                            <option value="ninguno">Selecicone una opcion</option>
+                            <option value="Opcion1">SMR</option>  
+                            <option value="Opcion2">DAW</option>  
+                                
+                         </select>
+                         <br>
+                         <label for="textArea" id="alfa">Mensaje:</label><br>
+                    <textarea name="textarea" rows="5" cols="5" id="textArea2" placeholder=""></textarea>
+                    <br>
+
+                         <input type="submit" value="AÑADIR" id="añadir" class="form-control  btn btn-primary">
+                         <br>
+                         
+                         <label for="select" id="selectoropciones">Curso</label><br>
+                    <select name="select" id="select2">
+                            <option value="ninguno">Selecicone una opcion</option>
+                            <option value="Opcion1">Curso1</option>  
+                            <option value="Opcion2">Curso2</option>      
+                         </select>
+                         <br>
+                         <br>
+                         <label for="email" class="">EMAIL:</label>
+                    <input type="email" name="email" id="email" class="form-control " value=""
+                        placeholder="Escribe EMAIL:">
+                    <br>
+                    <label for="textArea" id="alfa">Mensaje:</label><br>
+                    <textarea name="textarea" rows="3" cols="40" id="textArea" placeholder="Escribe un Mensaje"></textarea>
+                    <br>
+                    
+                    <input type="checkbox" id="opcion1" name="opcion1" value="opcion1" >
+                    <label for="opcion1" class="">Acepto las condiciones de la LPD</label>
+                    <br>
+                <div class="botones">
+                    <input type="submit" value="REGISTRARSE" id="boton" class="form-control  btn btn-secondary mb-1" disabled>
+                    <br>
+                    <input type="reset" value="LIMPIAR" class="form-control  btn btn-danger">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+        <script src="js/carga.js"></script>
+</body>
+
+</html>

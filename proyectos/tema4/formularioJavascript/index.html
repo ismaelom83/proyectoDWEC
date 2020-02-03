@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejercicio formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="validarFomularios.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css" id="css">
+        <script src="js/validacion.js"></script>
+    </head>
+    <body>
+        <h1>Formulario De Ismael</h1>
+        <div class="wrap">
+            <form action="bien.html" accept-charset="UTF-8" name="formularioIsmael" id="formularioIsmael"
+                  enctype="application/x-www-form-urlencoded" onsubmit=" return validar()">
+                <fieldset>
+                    <legend>Plantilla Formulario</legend>
+                    <fieldset class="secundario">
+                        <label for="campoAlfabetico" class="">Alfabetico:</label>
+                        <input type="text" name="campoAlfabetico" id="campoAlfabetico" value="" class="form-control "
+                               placeholder="Alfabetico:">
+                        <br>
+                        <label for="campoAlfabeticoOpcional" class="">AlfabeticoOpcional:</label>
+                        <input type="text" name="campoAlfabeticoOpcional" id="campoAlfabeticoOpcional" class="form-control "
+                               value="" placeholder="Escribe AlfabeticoOpcional:">
+                        <br>
+                        <label for="dni" class="">DNI:</label>
+                        <input type="text" name="dni" id="dni" value="" class="form-control " placeholder="Escribe DNI:">
+                        <br>
+                        <label for="dniOpcional" class="">DNI Opcional:</label>
+                        <input type="text" name="dniOpcional" id="dniOpcional" value="" class="form-control "
+                               placeholder="Escribe DNI Opcionalmente:">
+                        <br>
+                        <label for="email" class="">EMAIL:</label>
+                        <input type="email" name="email" id="email" class="form-control " value=""
+                               placeholder="Escribe EMAIL:">
+                        <br>
+                        <label for="fecha" class="">FECHA:</label>
+                        <input type="date" name="fechaObli" id="fechaObli" class="form-control " value="" placeholder="">
+                    </fieldset>
+                    <fieldset class="secundario">
+                        <label for="nombre" class="">ENTERO:</label>
+                        <input type="text" name="entero" id="entero" value="" class="form-control "
+                               placeholder="Introduce Entero:">
+                        <br>
+                        <label for="float" class="">FLOAT:</label>
+                        <input type="text" name="float" id="float" class="form-control " value=""
+                               placeholder="Escribe Numero Float:">
+                        <br>
+                        <label for="tlf" class="">TELEFONO:</label>
+                        <input type="text" name="tlf" id="tlf" value="" class="form-control " placeholder="Escribe TLF:">
+                        <br>
+                        <label for="passwd" class="">PASSWORD:</label>
+                        <input type="password" name="passwd" id="passwd" value="" class="form-control "
+                               placeholder="Escribe PASSWORD:">
+                        <br>
+                        <label for="checkbox" class="checkBox">CheckBox:</label><br>
+                        <input type="checkbox" id="opcion1" name="opcion1" value="opcion1"  checked>
+                        <label for="opcion1" class="">opcion1</label>
+                        <input type="checkbox" id="opcion2" name="opcion2" value="opcion2">
+                        <label for="opcion2" class="">opcion2</label>
+                        <input type="checkbox" id="opcion3" name="opcion3" value="opcion3">
+                        <label for="opcion3" class="">opcion3</label><br>
+
+                        <label for="rango" class="">RANGO:</label><br>
+                        <input type="range" min="0" max="100" value="1" step="1" list="steplist" id="rango">
+                        <datalist id="steplist">
+                            <option>0</option>
+                            <option>25</option>
+                            <option>50</option>
+                            <option>75</option>
+                            <option>100</option>
+                        </datalist>
+                        <br>
+                        <br>                
+                    </fieldset>
+                    <fieldset class="secundario">
+                        <br>
+                        <input type="radio" name="r1" value="" id="r1" checked>
+                        <label for="maria">opcion1</label>
+                        <input type="radio" name="r1" value="" id="r2">
+                        <label for="amor">opcion2</label>
+                        <input type="radio" name="r1" value="heraclilo sanchez" id="r3">
+                        <label for="heraclio">opcion3</label>
+                        <br>
+                        <label for="color" class="">COLOR:</label><br>
+                        <input type="color" name="color" id="color" value="" class="form-control ">
+                        <br>
+                        <label for="select" id="selectoropciones">Selector de Opciones</label>
+                        <select name="select" id="select">
+                            <option value="ninguno">Selecicone una de las opciones</option>
+                            <option value="Opcion1">Opcion1</option>  
+                            <option value="Opcion2">Opcion2</option>  
+                            <option value="Opcion3">Opcion3</option>  
+                            <option value="Opcion4">Opcion4</option>  
+                            <option value="Opcion5">Opcion5</option>  
+                            <option value="Opcion6">Opcion6</option>  
+                            <option value="Opcion7 ">Opcion7</option>      
+                        </select>
+                        <br>
+                        <br>
+                        <label for="archivos" id="labelArchivos">Selector de Archivos:</label>
+                        <input type="file" name="archivos" id="archivos" class="form-control ">                   
+                        <br>
+                        <label for="alfaNumerico">AlfaNumerico</label>
+                        <input type="text" name="alfaNumerico" id="alfaNumerico" value="" class="form-control "
+                               placeholder="EscribaAlfaNumerico:"><br>
+                        <label for="textArea" id="alfa">textArea:</label><br>
+                        <textarea name="textarea" rows="3" cols="40" id="textArea">Escribe algo en el textArea</textarea>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <div class="botones">
+                        <input type="submit" value="ENVIAR" class="form-control  btn btn-secondary mb-1">
+                        <br>
+                        <input type="reset" value="BORRAR" class="form-control  btn btn-danger">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>
