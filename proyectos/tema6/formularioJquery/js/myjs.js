@@ -50,13 +50,26 @@ $(function () {
                 $(":checkbox").attr("value", "checkbox" + index);
             })
         } else {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             $("#hideAsig").empty();
         }
     }
     
     
      /* aceptamos las condiciones de la LPD */
-    $('#lpda').click(function () {
+    $('#lpda').change(function () {
         if ($("#lpda").is(':checked')) {
             console.log("Lpda Aceptada");
             $("#btna").prop('disabled', false); //Cambia una propiedad ya establecida

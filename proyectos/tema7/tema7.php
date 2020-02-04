@@ -63,13 +63,13 @@
                             <a href="../../../proyectoDWES/LoginLogoffREST/index.php" class="text-decoration-none"><p class="card-text">Ejercicio que nos pide que al iniciar sesion en un programa si marcamos un checkbox recordar nos recuerde el nombre de usuario.</p></a>
                         </div>
                     </div>                   
-<!--                    <div class="card card1">
-                        <a href="ejemploSelectoresAvanzados/newhtml.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                    <div class="card card1">
+                        <a href="ejemploajax/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
-                            <a href="ejemploSelectoresAvanzados/newhtml.html" class="text-decoration-none"> <h5 class="card-title">Ejemplo de selectores</h5></a>
-                            <a href="ejemploSelectoresAvanzados/newhtml.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejo de selectores del DOM.</p></a>
+                            <a href="ejemploajax/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejemplo ajax</h5></a>
+                            <a href="ejemploajax/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejo de selectores del DOM.</p></a>
                         </div>
-                    </div>                   
+                    </div>                   <!--
                       <div class="card card1">
                           <a href="formularioFinal/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">

@@ -112,6 +112,7 @@
                             <a href="proyectos/tema7/tema7.php" class="text-decoration-none"><p class="card-text">Tema de manejo e datos con javascript</p></a>
                         </div>
                     </div>
+                    
                 </div> 
 
             </div>
