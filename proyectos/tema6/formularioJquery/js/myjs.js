@@ -20,10 +20,14 @@ $(function () {
      *  dependiendo de lo que allamos pulsado*/
     $("#modulo").change(asignaturas);
     $("#cursoa").change(asignaturas);
-    
-   
 
-    /*funcion para mostrar las asignaturas dependiendo de dinde allamos pulsado en los selects*/
+    /*cuando cambiemos el valor del select nos redirigira a la funcion asignatura donde mostraremos las asignaturas
+     *  dependiendo de lo que allamos pulsado*/
+    $("#moduloP").change(profesorA);
+    $("#cursoP").change(profesorA);
+
+
+    /*funcion para mostrar las asignaturas de los alumnos dependiendo de donde hemos pulsado en los selects*/
     function asignaturas() {
         if ($("#modulo").val() === "DAW") {
             var primerCurso = ["PROG", "BBDD", "SSOO", "LM", "ED"];
@@ -40,35 +44,54 @@ $(function () {
         if ($("#cursoa").val() === "primer") {
             jQuery.each(primerCurso, function (index, value) {
                 $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
-                $(":checkbox").attr("id", "cbox" + index);
-                $(":checkbox").attr("value", "checkbox" + index);
             });
         } else if ($("#cursoa").val() === "segundo") {
             jQuery.each(segundoCurso, function (index, value) {
                 $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
-                $(":checkbox").attr("id", "cbox" + index);
-                $(":checkbox").attr("value", "checkbox" + index);
             })
         } else {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             $("#hideAsig").empty();
         }
     }
+
+    /*funcion para mostrar las asignaturas que inparte el profesor dependiendo que ciclo y que curso a elegido*/
     
+       function profesorA() {
+        if ($("#moduloP").val() === "DAW") {
+            var primerCurso = ["PROG", "BBDD", "SSOO", "LM", "ED"];
+            var segundoCurso = ["DAW", "DIW", "DWES", "DWEC"];
+        } else {
+            $("#parañadir").empty();
+        }
+        if ($("#moduloP").val() === "SMR") {
+            var primerCurso = ["REDES", "SE", "SSOO", "AO", "FOL"];
+            var segundoCurso = ["SI", "IE", "BBDD", "SR", "SSOO"];
+        } else {
+            $("#parañadir").empty();
+        }
+        if ($("#cursoP").val() === "primer") {
+             jQuery.each(primerCurso, function (index, value) {
+                $("#parañadir").append($("<option>").attr("value", primerCurso[index]).text(primerCurso[index]));
+            })
+        } else if ($("#cursoP").val() === "segundo") {
+            jQuery.each(segundoCurso, function (index, value) {
+                $("#parañadir").append($("<option>").attr("value", segundoCurso[index]).text(segundoCurso[index]));
+            })
+        } else {
+            $("#parañadir").empty();
+        }
+    }
     
-     /* aceptamos las condiciones de la LPD */
+    /*si pulsamos el boton de añadir asignatuar que imparte el profesor nos lo añade al select */
+$("#anadir").click(anadirAsignatura);
+
+
+       /*funcion para añadir las asignaturas selecionadas por el profesor en el otro select*/
+       
+       function anadirAsignatura() {
+        $("#selectanadir").append($("<option>").attr("value", $("#parañadir").val()).text($("#parañadir").val()).clone());
+    }
+    /* aceptamos las condiciones de la LPD si no no deja enviar*/
     $('#lpda').change(function () {
         if ($("#lpda").is(':checked')) {
             console.log("Lpda Aceptada");
@@ -79,6 +102,16 @@ $(function () {
         }
     });
 
+    /* aceptamos las condiciones de la LPD si no no deja enviar*/
+    $('#lpdp').change(function () {
+        if ($("#lpdp").is(':checked')) {
+            console.log("Lpdp Aceptada");
+            $("#btnp").prop('disabled', false); //Cambia una propiedad ya establecida
+        } else {
+            console.log("Lpdp no aceptada");
+            $("#btnp").prop('disabled', true); //Cambia una propiedad ya establecida
+        }
+    });
 
 
 

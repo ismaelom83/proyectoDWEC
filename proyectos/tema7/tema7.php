@@ -69,14 +69,14 @@
                             <a href="ejemploajax/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejemplo ajax</h5></a>
                             <a href="ejemploajax/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejo de selectores del DOM.</p></a>
                         </div>
-                    </div>                   <!--
-                      <div class="card card1">
-                          <a href="formularioFinal/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                    </div>                   
+                     <div class="card card1">
+                         <a href="ajax1/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
-                            <a href="formularioFinal/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico 21</h5></a>
-                            <a href="formularioFinal/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de eliminar elementos del select con la s propiedadesw del DOM.</p></a>
+                            <a href="ajax1/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico Ajax 1</h5></a>
+                            <a href="ajax1/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar ajax con el famoso formulario.</p></a>
                         </div>
-                    </div>                -->
+                    </div>                
                 </div> 
             </div>         
         </main>
