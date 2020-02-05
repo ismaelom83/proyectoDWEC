@@ -8,24 +8,18 @@ $(function () {
 //creamos un evento para recoger lo que marcamos en el imput de modulos. 
     $("#modulo").change(marcarModulo);
     miHHR.onreadystatechange = cambio;
-    miHHR.send("DAW1=" + $("#modulo").val() + "&DAW2=" + $("#modulo").val());
-    function marcarModulo() {
-        if ($("#modulo").val() === "DAW") {
-
-            function cambio() {
-                if (this.readyState == 4 && this.status == 200) {
-                    primercurso = this.responseText;
-                }
-            }
-        }
-    }
-
-
-
-
-
-
-
+    miHHR.send("DAW=" + $("#modulo").val());
+    
+    
+//    function marcarModulo() {
+//        if ($("#modulo").val() === "DAW"&& $("#cursoa").val() === "primero") {
+//            function cambio() {
+//                if (this.readyState == 4 && this.status == 200) {
+//                    primercurso = this.responseText;
+//                }
+//            }
+//        }
+//    }
     /*por defecto siempre saldra el formulario de el alumno
      * pero si pulsamos el del profesor nos oculta alumno y viceveerssa
      * */
