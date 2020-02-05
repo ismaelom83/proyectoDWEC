@@ -112,6 +112,13 @@
                             <a href="proyectos/tema7/tema7.php" class="text-decoration-none"><p class="card-text">Tema de manejo e datos con javascript</p></a>
                         </div>
                     </div>
+                        <div class="card">
+                            <a href="proyectos/tema8/tema8.php"><img src="../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="proyectos/tema8/tema8.php" class="text-decoration-none"> <h5 class="card-title">Ejercicios tema 8</h5></a>
+                            <a href="proyectos/tema8/tema8.php" class="text-decoration-none"><p class="card-text">Tema de manejo de ajax</p></a>
+                        </div>
+                    </div>
                     
                 </div> 
 

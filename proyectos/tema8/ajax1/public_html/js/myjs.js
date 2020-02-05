@@ -1,25 +1,61 @@
 $(function () {
 
+
+
+
 //instanciamos la clase XMLH
     miHHR = new XMLHttpRequest();
-    //para enviar por post
-    miHHR.open('POST', 'asignaturas.php', true);
-    miHHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//creamos un evento para recoger lo que marcamos en el imput de modulos. 
-    $("#modulo").change(marcarModulo);
-    miHHR.onreadystatechange = cambio;
-    miHHR.send("DAW=" + $("#modulo").val());
-    
-    
-//    function marcarModulo() {
-//        if ($("#modulo").val() === "DAW"&& $("#cursoa").val() === "primero") {
-//            function cambio() {
-//                if (this.readyState == 4 && this.status == 200) {
-//                    primercurso = this.responseText;
-//                }
-//            }
-//        }
-//    }
+
+    $("#modulo").click(conectar);
+
+    function conectar() {
+        if (miHHR) {
+            var url;
+            var valorModulo = $("#modulo").val();
+            url = "modulo.php?modulo=" + valorModulo;
+            console.log(valorModulo);
+            miHHR.open('GET', url, true);
+            miHHR.onreadystatechange = cambio;
+            miHHR.send(null);
+        } else {
+            alert("no conexion");
+        }
+    }
+
+    function cambio() {
+//    console.log(this.readyState);
+//    console.log(this.responseText);
+//    console.log(this.status);
+        //si hay respuesta del servidor 4
+        //si ha sido satisfactoria 200
+        if (this.readyState == 4 && this.status == 200) {
+//            console.log(this.responseText);
+//            var div1 = $("#pdiv");
+//            div1.innerHTML = this.responseText;
+            console.log(this.responseText);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*por defecto siempre saldra el formulario de el alumno
      * pero si pulsamos el del profesor nos oculta alumno y viceveerssa
      * */

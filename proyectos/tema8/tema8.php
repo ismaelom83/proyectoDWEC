@@ -42,7 +42,7 @@
                 </div>
             </nav>
             <h1 class=" h1">
-                Ejercicios del tema 7<br>
+                Ejercicios del tema 8<br>
                 <small class="text-muted">Ismael Heras Salvador</small>
            </h1>
         </header>
@@ -50,21 +50,29 @@
                   <div class="container">  
                 <div class="card-deck ">
                     <div class="card card1">
-                        <a href="../../../index.php"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <a href="ejemplo ajax 2/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
-                            <a href="../../../index.php" class="text-decoration-none"> <h5 class="card-title">Ejercicio  de cookies</h5></a>
-                            <a href="../../../index.php" class="text-decoration-none"><p class="card-text">Ejerciocio que nos pide una que cuando entremos a la aplicacion nos salga una ventana para aceptarlas y ahacer un contador con el numero de veces que hemos entrado</p></a>
+                            <a href="../../../index.php" class="text-decoration-none"> <h5 class="card-title">Ejemplo ajax 2</h5></a>
+                            <a href="../../../index.php" class="text-decoration-none"><p class="card-text">Ejerciciom para manipular una base de datos con ajax.</p></a>
+                        </div>
+                    </div>                   
+                    </div>                   
+                    <div class="card card1">
+                        <a href="ejemploajax/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="ejemploajax/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejemplo ajax</h5></a>
+                            <a href="ejemploajax/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejo de selectores del DOM.</p></a>
                         </div>
                     </div>                   
                      <div class="card card1">
-                         <a href="../../../proyectoDWES/LoginLogoffREST/index.php"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                         <a href="ajax1/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
-                            <a href="../../../proyectoDWES/LoginLogoffREST/index.php" class="text-decoration-none"> <h5 class="card-title">Ejercio de Storage</h5></a>
-                            <a href="../../../proyectoDWES/LoginLogoffREST/index.php" class="text-decoration-none"><p class="card-text">Ejercicio que nos pide que al iniciar sesion en un programa si marcamos un checkbox recordar nos recuerde el nombre de usuario.</p></a>
+                            <a href="ajax1/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico Ajax 1</h5></a>
+                            <a href="ajax1/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar ajax con el famoso formulario.</p></a>
                         </div>
-                    </div>                                 
+                    </div>                
                 </div> 
-            </div>         
+                 
         </main>
 
 
