@@ -1,13 +1,28 @@
 $(function () {
 
-
-
-
-//instanciamos la clase XMLH
     miHHR = new XMLHttpRequest();
+//peticion de modulos 
+ url = "modulo.php";
+           
+            miHHR.open('GET', url, true);
+    miHHR.onreadystatechange = peticion;
+    miHHR.send(null);
+     function peticion() {
+//    console.log(this.readyState);
+//    console.log(this.responseText);
+//    console.log(this.status);
+        //si hay respuesta del servidor 4
+        //si ha sido satisfactoria 200
+        if (this.readyState == 4 && this.status == 200) {
+            var div1 = $("#modulo");
+           div1.innerHTML = this.responseText;
+           
+        }
+    }
+    
 
-    $("#modulo").click(conectar);
 
+    $("#modulo").change(conectar);
     function conectar() {
         if (miHHR) {
             var url;

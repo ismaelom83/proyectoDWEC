@@ -70,7 +70,8 @@
                             <a href="ajax1/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico Ajax 1</h5></a>
                             <a href="ajax1/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar ajax con el famoso formulario.</p></a>
                         </div>
-                    </div>                
+                    </div>     
+                     
                 </div> 
                  
         </main>

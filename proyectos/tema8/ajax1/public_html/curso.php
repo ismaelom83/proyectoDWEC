@@ -5,4 +5,4 @@ $segundoSRM = ["MyMdE", "SoER", "Seguridad", "SerRed", "EIE"];
 $primeroDAW = ["SI", "SGBD", "Programacion", "LDM", "Entornos", "Fol"];
 $segundoDAW = ["DWEC", "DWES", "DAW", "DIW", "FOL"];
 
-$ciclos = ["DAW","SMR"];
+//tiene que mirar que ciclo es.

@@ -27,7 +27,7 @@ function conectar() {
         
         
         //para enviar por post
-        miHHR.open('POST','fecha.php',true);
+//        miHHR.open('POST','fecha.php',true);
 //        miHHR.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 //        
 //        
@@ -54,4 +54,15 @@ function cambio(){
 window.addEventListener('load',cargar,false);
 
 
-
+//$(function () {
+////    $.ajax({url:'fecha.php',type:'post',async:true,data:'numero=1', success: function(respuesta){
+////            alert(respuesta);
+////    } });
+//
+////$('#respuesta').load("fecha.php",{numero:1});
+////
+////$.get('fecha2.php?numero=4',function(respuesta) {
+////        alert(respuesta);
+////    });
+//
+//});
