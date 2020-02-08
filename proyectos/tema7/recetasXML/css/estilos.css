@@ -1,0 +1,39 @@
+body{
+    width: 70%;
+    margin: auto;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+}
+
+.enunciado{
+    text-align: center;
+}
+.enunciado p{
+    text-align: left;
+}
+.elegir{
+    font-size: 20px;
+}
+.ingredientesYPasos{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+}
+#pasos li{
+    list-style: none;
+}
+button{
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color:#8A6D3B;
+    border-radius: 7px;
+}
+button:hover{
+    cursor: pointer;
+}

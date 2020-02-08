@@ -70,6 +70,21 @@
                             <a href="almacenamientoJSON/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio que nos pide que al iniciar sesion en un programa si marcamos un checkbox recordar nos recuerde el nombre de usuario.</p></a>
                         </div>
                     </div> 
+                    
+                       <div class="card card1">
+                            <a href="recetasXML/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="recetasXML/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de recetas XML</h5></a>
+                            <a href="recetasXML/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar un archivo XML</p></a>
+                        </div>
+                    </div>  
+                     <div class="card card1">
+                         <a href="recetasJSON/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="rrecetasJSON/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de recetas JSON</h5></a>
+                            <a href="recetasJSON/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar un archivo JSON</p></a>
+                        </div>
+                    </div> 
                 </div> 
             </div>         
         </main>
