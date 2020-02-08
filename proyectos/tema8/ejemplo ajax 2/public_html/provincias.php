@@ -1,6 +1,6 @@
 <?php
 
-define("CONEXION", "mysql:host=192.168.20.19:3306;dbname=DAW209DBproyectoLoginLogoffMulticapaPOO"); //clase
+define("CONEXION", "mysql:host=192.168.1.245:3306;dbname=DAW209DBproyectoLoginLogoffMulticapaPOO"); //clase
 //define("CONEXION", "mysql:host=192.168.1.203:3306;dbname=DAW215LoginLogoutMulticapaPDO"); //casa
 define("USUARIO", "usuarioDAW209DBLoginPOO");
 define("PASSWORD", "paso");

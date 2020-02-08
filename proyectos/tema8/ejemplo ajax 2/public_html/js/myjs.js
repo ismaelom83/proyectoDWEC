@@ -23,6 +23,7 @@ function cambio(){
         var json = this.responseText;
         console.log(json);
         var objetos = JSON.parse(json);
+        console.log(objetos);
         document.getElementById("resultados").innerHTML = this.responseText;
     }
 }

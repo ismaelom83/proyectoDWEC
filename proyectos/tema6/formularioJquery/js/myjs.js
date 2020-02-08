@@ -15,6 +15,7 @@ $(function () {
 
 
 
+    
 
     /*cuando cambiemos el valor del select nos redirigira a la funcion asignatura donde mostraremos las asignaturas
      *  dependiendo de lo que allamos pulsado*/
@@ -112,8 +113,60 @@ $("#anadir").click(anadirAsignatura);
             $("#btnp").prop('disabled', true); //Cambia una propiedad ya establecida
         }
     });
-
-
+    
+    
+     $("#Nombrea").blur(function () {
+        /* Poner en mayúscula el primer caracter */
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarAlfabetico(this.value) === true) {
+            $("#enombre").remove();
+            $(this).css("color", "green");
+            $(this).css("background", "#BBFFBB");
+        } else {
+            $("#enombre").remove();
+            $(this).css("color", "red");
+            $(this).after("<span id='enombre'>Error en el texto introducido</span>");
+        }
+    });
+    $("#Apellidosa").blur(function () {
+        /* Poner en mayúscula el primer caracter */
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarAlfabetico(this.value) === true) {
+            $("#enombre").remove();
+            $(this).css("color", "green");
+            $(this).css("background", "#BBFFBB");
+        } else {
+            $("#enombre").remove();
+            $(this).css("color", "red");
+            $(this).after("<span id='enombre'>Error en el texto introducido</span>");
+        }
+    });
+     /* Validar email */
+    $("#Correo").blur(function () {
+        if (validarEmail(this.value) === true) {
+            $(this).css("color", "green");
+            $(this).css("background", "#BBFFBB");
+        } 
+    });
 
 })
+ 
+   
 
+/*---------------------------------------------validaciones-----------------------------------*/
+
+function validarAlfabetico(campo) {
+     var expreg = /^[a-zA-Z ]*$/i;
+    if (expreg.test(campo) /* && campo !== "" */) {
+        return true;
+    }
+    return false;
+}
+function validarEmail(email) {
+    exp = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (!exp.test(email)) {
+        return false;
+    } else {
+        return true;
+    }
+}
