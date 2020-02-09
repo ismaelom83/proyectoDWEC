@@ -47,13 +47,25 @@
            </h1>
         </header>
         <main>       
-                  <div class="container">  
+                  <div class="container mt-3">  
                 <div class="card-deck ">
                     <div class="card card1">
                         <a href="formularioJquery/formularioBonito.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
-                            <a href="formularioJquery/formularioBonito.html" class="text-decoration-none"> <h5 class="card-title">Ejercioc de un formularo con jquery</h5></a>
+                            <a href="formularioJquery/formularioBonito.html" class="text-decoration-none"> <h5 class="card-title">Ejercicio de un formularo con jquery</h5></a>
                             <a href="formularioJquery/formularioBonito.html" class="text-decoration-none"><p class="card-text">Ejercicio para parcticar la libreria de jquery en formularios.</p></a>
+                        </div>
+                    </div>                   
+                             
+                </div> 
+                      <br>
+                      
+                        <div class="card-deck ">
+                    <div class="card card1">
+                        <a href="validacionEntradaJquery/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="validacionEntradaJquery/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercicio de validacion de entrada con jquery</h5></a>
+                            <a href="validacionEntradaJquery/index.html" class="text-decoration-none"><p class="card-text">Ejercicio para parcticar la libreria de jquery en formularios.</p></a>
                         </div>
                     </div>                   
                              
