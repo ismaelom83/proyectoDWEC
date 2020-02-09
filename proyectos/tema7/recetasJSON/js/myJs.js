@@ -22,8 +22,8 @@ $(function () {
         $.getJSON("JSON/recetas.json", function (data) {
             //vaciamos los elementos para que no se repitan.
             $(".titulo").empty();
-            $("#ingredientes").empty();
-            $("#elaboracion").empty();
+            $("ul").empty();
+            $("ol").empty();
             $(".titulo").append("<h1 class='titulo2'></h1>");
             $(".titulo2").text("Receta para : " + nombre);
 
@@ -32,12 +32,12 @@ $(function () {
                 if (data.recetas.receta[i].nombre === nombre) {
                     //Ingredientes utilizados en esta receta
                     for (var j = 0; j < data.recetas.receta[i].ingredientes.ingrediente.length; j++) {
-                        $("#ingredientes").append("<li></li>");
+                        $("ul").append("<li></li>");
                         $("li").last().text(data.recetas.receta[i].ingredientes.ingrediente[j]["-cantidad"] + " " + data.recetas.receta[i].ingredientes.ingrediente[j]["-unidad"] + " " + data.recetas.receta[i].ingredientes.ingrediente[j]["#text"]);
                     }
                     //Proceso de elaboracion de la receta
                     for (var j = 0; j < data.recetas.receta[i].proceso.paso.length; j++) {
-                        $("#elaboracion").append("<li></li>");
+                        $("ol").append("<li></li>");
                         $("li").last().text(data.recetas.receta[i].proceso.paso[j]["#text"]);
                     }
                 }

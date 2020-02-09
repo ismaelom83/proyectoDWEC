@@ -14,9 +14,6 @@ $(function () {
     })
 
 
-
-    
-
     /*cuando cambiemos el valor del select nos redirigira a la funcion asignatura donde mostraremos las asignaturas
      *  dependiendo de lo que allamos pulsado*/
     $("#modulo").change(asignaturas);
@@ -83,8 +80,9 @@ $(function () {
         }
     }
     
-    /*si pulsamos el boton de añadir asignatuar que imparte el profesor nos lo añade al select */
+    /*si pulsamos el boton de añadir asignatuar que imparte el profesor nos lo añade al select, si le damos a borrar nos la borra */
 $("#anadir").click(anadirAsignatura);
+$("#borrarP").click(borrarAsignatura);
 
 
        /*funcion para añadir las asignaturas selecionadas por el profesor en el otro select*/
@@ -92,68 +90,135 @@ $("#anadir").click(anadirAsignatura);
        function anadirAsignatura() {
         $("#selectanadir").append($("<option>").attr("value", $("#parañadir").val()).text($("#parañadir").val()).clone());
     }
-    /* aceptamos las condiciones de la LPD si no no deja enviar*/
+    
+     /*funcion para añadir las asignaturas selecionadas por el profesor en el otro select*/
+       
+       function borrarAsignatura() {
+        $("#selectanadir").children("option:selected").remove();
+    }
+    
+    /* aceptamos las condiciones de la LPD*/
     $('#lpda').change(function () {
         if ($("#lpda").is(':checked')) {
             console.log("Lpda Aceptada");
-            $("#btna").prop('disabled', false); //Cambia una propiedad ya establecida
+            $("#btna").prop('disabled', false); 
         } else {
             console.log("Lpda no aceptada");
-            $("#btna").prop('disabled', true); //Cambia una propiedad ya establecida
+            $("#btna").prop('disabled', true); 
         }
     });
 
-    /* aceptamos las condiciones de la LPD si no no deja enviar*/
+    /* aceptamos las condiciones de la LPD*/
     $('#lpdp').change(function () {
         if ($("#lpdp").is(':checked')) {
             console.log("Lpdp Aceptada");
-            $("#btnp").prop('disabled', false); //Cambia una propiedad ya establecida
+            $("#btnp").prop('disabled', false);
         } else {
             console.log("Lpdp no aceptada");
-            $("#btnp").prop('disabled', true); //Cambia una propiedad ya establecida
+            $("#btnp").prop('disabled', true);
         }
     });
     
+    /*----------------------------------------------Validaciones de alumno------------------*/
     
      $("#Nombrea").blur(function () {
-        /* Poner en mayúscula el primer caracter */
         $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
         if (validarAlfabetico(this.value) === true) {
             $("#enombre").remove();
-            $(this).css("color", "green");
-            $(this).css("background", "#BBFFBB");
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
         } else {
-            $("#enombre").remove();
+            $(this).css("background", "white");
             $(this).css("color", "red");
-            $(this).after("<span id='enombre'>Error en el texto introducido</span>");
         }
     });
     $("#Apellidosa").blur(function () {
-        /* Poner en mayúscula el primer caracter */
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarAlfabetico(this.value) === true) {
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
+        } else {
+           $(this).css("background", "white");
+            $(this).css("color", "red");
+        }
+    });
+    
+      $("#Dnia").blur(function () {
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarDni(this.value) === true) {
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
+        } else {
+            $(this).css("background", "white");
+            $(this).css("color", "red");
+           
+        }
+    });
+    
+    
+     /* Validar correo electronico*/
+    $("#Correo").blur(function () {
+        if (validarEmail(this.value) === true) {
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
+        } 
+    });
+    
+     /*----------------------------------------------Validaciones de profesor------------------*/
+ 
+     $("#NombreP").blur(function () {
         $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
         if (validarAlfabetico(this.value) === true) {
             $("#enombre").remove();
-            $(this).css("color", "green");
-            $(this).css("background", "#BBFFBB");
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
         } else {
-            $("#enombre").remove();
+            $(this).css("background", "white");
             $(this).css("color", "red");
-            $(this).after("<span id='enombre'>Error en el texto introducido</span>");
         }
     });
-     /* Validar email */
-    $("#Correo").blur(function () {
+    $("#ApellidosP").blur(function () {
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarAlfabetico(this.value) === true) {
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
+        } else {
+           $(this).css("background", "white");
+            $(this).css("color", "red");
+        }
+    });
+    
+      $("#DniP").blur(function () {
+        $(this).val($(this).val().charAt(0).toUpperCase() + $(this).val().slice(1));
+        if (validarDni(this.value) === true) {
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
+        } else {
+            $(this).css("background", "white");
+            $(this).css("color", "red");
+           
+        }
+    });
+    
+    
+     /* Validar correo electronico*/
+    $("#CorreoP").blur(function () {
         if (validarEmail(this.value) === true) {
-            $(this).css("color", "green");
-            $(this).css("background", "#BBFFBB");
+            $(this).css("color", "#000");
+            $(this).css("background", "lightgreen");
         } 
     });
+    
+    
 
 })
  
+
+
+
    
 
-/*---------------------------------------------validaciones-----------------------------------*/
+/*---------------------------------------------Funciones de validacion -----------------------------------*/
 
 function validarAlfabetico(campo) {
      var expreg = /^[a-zA-Z ]*$/i;
@@ -165,8 +230,32 @@ function validarAlfabetico(campo) {
 function validarEmail(email) {
     exp = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     if (!exp.test(email)) {
+         alert('correo no valido no válido.');
         return false;
+        
     } else {
         return true;
+    }
+}
+function validarDni(dni) {
+    var numero;
+    var let;
+    var letra;
+    var expresion_regular_dni;
+    expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+    if (expresion_regular_dni.test(dni) == true) {
+        numero = dni.substr(0, dni.length - 1);
+        let = dni.substr(dni.length - 1, 1);
+        let = let.toUpperCase();
+        numero = numero % 23;
+        letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+        letra = letra.substring(numero, numero + 1);
+        if (letra != let) {
+            alert('La letra no corresponde con el DNI.');
+        } else {
+            return true;
+        }
+    } else {
+        return false;
     }
 }
