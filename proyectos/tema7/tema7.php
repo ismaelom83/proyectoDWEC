@@ -44,10 +44,10 @@
             <h1 class=" h1">
                 Ejercicios del tema 7<br>
                 <small class="text-muted">Ismael Heras Salvador</small>
-           </h1>
+            </h1>
         </header>
         <main>       
-                  <div class="container">  
+            <div class="container">  
                 <div class="card-deck ">
                     <div class="card card1">
                         <a href="../../../index.php"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
@@ -56,49 +56,58 @@
                             <a href="../../../index.php" class="text-decoration-none"><p class="card-text">Ejerciocio que nos pide una que cuando entremos a la aplicacion nos salga una ventana para aceptarlas y ahacer un contador con el numero de veces que hemos entrado</p></a>
                         </div>
                     </div>                   
-                     <div class="card card1">
-                         <a href="../../../proyectoDWES/LoginLogoffREST/index.php"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                    <div class="card card1">
+                        <a href="../../../proyectoDWES/LoginLogoffREST/index.php"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
                             <a href="../../../proyectoDWES/LoginLogoffREST/index.php" class="text-decoration-none"> <h5 class="card-title">Ejercio de Storage</h5></a>
                             <a href="../../../proyectoDWES/LoginLogoffREST/index.php" class="text-decoration-none"><p class="card-text">Ejercicio que nos pide que al iniciar sesion en un programa si marcamos un checkbox recordar nos recuerde el nombre de usuario.</p></a>
                         </div>
                     </div>  
-                     <div class="card card1">
-                         <a href="almacenamientoJSON/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                    <div class="card card1">
+                        <a href="almacenamientoJSON/public_html/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
                             <a href="almacenamientoJSON/public_html/index.html" class="text-decoration-none"> <h5 class="card-title">Ejemplo JSON</h5></a>
                             <a href="almacenamientoJSON/public_html/index.html" class="text-decoration-none"><p class="card-text">Ejercicio que nos pide que al iniciar sesion en un programa si marcamos un checkbox recordar nos recuerde el nombre de usuario.</p></a>
                         </div>
                     </div> 
-                    
-                       <div class="card card1">
-                            <a href="recetasXML/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+
+                    <div class="card card1">
+                        <a href="recetasXML/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
                             <a href="recetasXML/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de recetas XML</h5></a>
                             <a href="recetasXML/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar un archivo XML</p></a>
                         </div>
                     </div>  
-                     <div class="card card1">
-                         <a href="recetasJSON/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                    <div class="card card1">
+                        <a href="recetasJSON/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
                             <a href="rrecetasJSON/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de recetas JSON</h5></a>
                             <a href="recetasJSON/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar un archivo JSON</p></a>
                         </div>
                     </div> 
+                    <div class="card card1">
+                        <a href="ejemploidexedDB/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="ejemploidexedDB/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de ejemplo de indexDB</h5></a>
+                            <a href="ejemploidexedDB/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar de la base de datos indexDB</p></a>
+                        </div>
+                    </div> 
+                    <div class="card card1">
+                        <a href="indexDBdepartamentos/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
+                        <div class="card-body">
+                            <a href="indexDBdepartamentos/index.html" class="text-decoration-none"> <h5 class="card-title">Departamentos indexDB</h5></a>
+                            <a href="indexDBdepartamentos/index.html" class="text-decoration-none"><p class="card-text">Tomando como base la tabla departamentos de heraclio la almacenamos en indexDB</p></a>
+                        </div>
+                    </div>
                 </div> 
             </div>         
         </main>
-
-
         <!-- Footer -->
         <footer class="page-footer font-small blue">
-
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">© 2020 Copyright: Ismael Heras Salvado
-
             </div>
             <!-- Copyright -->
-
         </footer>
         <!-- Footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
