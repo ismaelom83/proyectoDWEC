@@ -71,13 +71,13 @@
                         </div>
                     </div> 
 
-                    <div class="card card1">
+<!--                    <div class="card card1">
                         <a href="recetasXML/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">
                             <a href="recetasXML/index.html" class="text-decoration-none"> <h5 class="card-title">Ejercico de recetas XML</h5></a>
                             <a href="recetasXML/index.html" class="text-decoration-none"><p class="card-text">Ejercicio de manejar un archivo XML</p></a>
                         </div>
-                    </div>  
+                    </div>  -->
                     <div class="card card1">
                         <a href="recetasJSON/index.html"><img src="../../../images/js.png" class="card-img-top card-fluid" alt="..."></a>
                         <div class="card-body">

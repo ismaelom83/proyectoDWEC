@@ -11,8 +11,10 @@ $(function () {
     $("#leert").click(leerTodosBD);
     $("#borrarTabla").click(borrarTabla);
     $("#borrarRegistros").click(borrarRegistros);
+    $("#modificar").click(modificar);
 
-     crearBD();
+
+    crearBD();
 
 
     function crearBD() {
@@ -35,7 +37,7 @@ $(function () {
         abrirDB.onupgradeneeded = function (event) {
             //creamos contenedor tabla objetstore
             bd = event.target.result;
-            bd.createObjectStore("Departamento", {autoIncrement: true});
+            bd.createObjectStore("Departamento", {keyPath: "codigo"});
         }
 
     }
@@ -107,23 +109,38 @@ $(function () {
             var cursor = event.target.result;
 
             if (cursor) {
-                $("tbody").append("<tr></tr>");
-                $("tr").append("<td>" + cursor.value.codigo + "</td>");
-
-                $("tbody").append("<tr></tr>");
-                $("tr").append("<td>" + cursor.value.desccripcion + "</td>");
-
-                $("tbody").append("<tr></tr>");
-                $("tr").append("<td>" + cursor.value.volumenNegocio + "</td>");
-
-
+                var tbody = document.getElementsByTagName("tbody")[0];
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(cursor.value.codigo));
+                tr.appendChild(td);
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(cursor.value.desccripcion));
+                tr.appendChild(td);
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(cursor.value.volumenNegocio));
+                tr.appendChild(td);          
+                var td = document.createElement("td");
+                var boton = document.createElement("button");
+                boton.value = "borrar";
+                boton.id = cursor.value.codigo;
+                td.appendChild(boton);
+                tr.appendChild(td);
+                var td = document.createElement("td");
+                var boton2 = document.createElement("button");
+                boton2.value = "modificar";
+                boton2.addEventListener('click', modificar, false);
+                boton2.id = cursor.value.codigo;
+                td.appendChild(boton2);
+                tr.appendChild(td);
+//            var td = document.createElement("td");
+//            td.appendChild(document.createTextNode(cursor.value.material));
+//            tr.appendChild(td);
+                tbody.appendChild(tr);
                 cursor.continue();
-
             } else {
-
             }
         };
-
     }
     ;
     function borrarTabla() {
@@ -148,7 +165,19 @@ $(function () {
             }
         }
     }
-
+    function modificar() {
+        var transaccion = bd.transaction(["Departamento"], "readwrite");
+        var contenedor = transaccion.objectStore("Departamento");
+        //consultar
+        contenedor.get(this.id).onsuccess = function (event) {
+            var objeto = event.target.result;
+            console.log(objeto);
+            if (objeto != "undefined") {
+                contenedor.put({codigo: $("#thcodigo").val(), desccripcion: $("#thdesc").val(), volumenNegocio: $("#thvolNego").val()});
+            }
+        };
+    }
+    ;
 });
 
 
