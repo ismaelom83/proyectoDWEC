@@ -11,7 +11,7 @@ $(function () {
     $("#leert").click(leerTodosBD);
     $("#borrarTabla").click(borrarTabla);
     $("#borrarRegistros").click(borrarRegistros);
-    $("#modificar").click(modificar);
+//    $("#modificar").click(modificar);
 
 
     crearBD();
@@ -100,6 +100,9 @@ $(function () {
 
 
     function leerTodosBD() {
+        $(function () {
+            $("tbody").empty();
+        });
         $("tbody").show();
         //abrimos la base de datos
         crearBD();
@@ -109,35 +112,42 @@ $(function () {
             var cursor = event.target.result;
 
             if (cursor) {
-                var tbody = document.getElementsByTagName("tbody")[0];
-                var tr = document.createElement("tr");
-                var td = document.createElement("td");
-                td.appendChild(document.createTextNode(cursor.value.codigo));
-                tr.appendChild(td);
-                var td = document.createElement("td");
-                td.appendChild(document.createTextNode(cursor.value.desccripcion));
-                tr.appendChild(td);
-                var td = document.createElement("td");
-                td.appendChild(document.createTextNode(cursor.value.volumenNegocio));
-                tr.appendChild(td);          
-                var td = document.createElement("td");
-                var boton = document.createElement("button");
-                boton.value = "borrar";
-                boton.id = cursor.value.codigo;
-                td.appendChild(boton);
-                tr.appendChild(td);
-                var td = document.createElement("td");
-                var boton2 = document.createElement("button");
-                boton2.value = "modificar";
-                boton2.addEventListener('click', modificar, false);
-                boton2.id = cursor.value.codigo;
-                td.appendChild(boton2);
-                tr.appendChild(td);
-//            var td = document.createElement("td");
-//            td.appendChild(document.createTextNode(cursor.value.material));
-//            tr.appendChild(td);
-                tbody.appendChild(tr);
-                cursor.continue();
+             var tbody= document.getElementsByTagName("tbody")[0];
+            var tr=document.createElement("tr");
+            tr.setAttribute("data-codigo",cursor.value.codigo);
+            var td=document.createElement("td");
+            td.appendChild(document.createTextNode(cursor.value.codigo));
+            tr.appendChild(td);
+            var td=document.createElement("td");
+            td.appendChild(document.createTextNode(cursor.value.desccripcion));
+            tr.appendChild(td);
+            var td=document.createElement("td");
+            td.appendChild(document.createTextNode(cursor.value.volumenNegocio));
+            tr.appendChild(td);
+            var td=document.createElement("td");
+            tr.appendChild(td);
+            var td=document.createElement("td");
+            var button=document.createElement("button");
+            button.setAttribute("value","Modificar");
+            button.setAttribute("id","modificar");
+            button.setAttribute("data-codigo",cursor.value.codigo);
+            button.innerHTML="Modificar";
+            td.appendChild(button);
+            tr.appendChild(td);
+             var td=document.createElement("td");
+            var button=document.createElement("button");
+            button.setAttribute("value","Eliminar");
+            button.setAttribute("id","eliminar");
+            button.setAttribute("data-codigo",cursor.value.codigo);
+            button.innerHTML="Eliminar";
+            td.appendChild(button);
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+            var modificar=document.getElementById("eliminar");
+            modificar.addEventListener('click',eliminarDB,false);
+            var eliminar=document.getElementById("modificar");
+            eliminar.addEventListener('click',modificar,false);
+            cursor.continue();
             } else {
             }
         };
@@ -166,6 +176,7 @@ $(function () {
         }
     }
     function modificar() {
+        alert("hola modificar");
         var transaccion = bd.transaction(["Departamento"], "readwrite");
         var contenedor = transaccion.objectStore("Departamento");
         //consultar
@@ -173,11 +184,26 @@ $(function () {
             var objeto = event.target.result;
             console.log(objeto);
             if (objeto != "undefined") {
-                contenedor.put({codigo: $("#thcodigo").val(), desccripcion: $("#thdesc").val(), volumenNegocio: $("#thvolNego").val()});
+                contenedor.put({codigo: cursor.value.codigo, desccripcion: cursor.value.desccripcion, volumenNegocio: cursor.value.volumenNegocio});
             }
         };
     }
     ;
+    
+    function eliminarDB(){
+    var transaccion=bd.transaction(["Departamento"],"readwrite");
+    var contenedor=transaccion.objectStore("Departamento");
+    var codigo=this.dataset.codigo;
+    contenedor.get(codigo).onsuccess=function(event){
+        var objeto=event.target.result;
+        if(objeto!=="undefined"){
+          contenedor.delete(objeto.codigo);
+        }
+        var tabla=document.getElementsByTagName("table")[0];
+        var contador=1;
+        leerTodosBD();
+    }
+}
 });
 
 
