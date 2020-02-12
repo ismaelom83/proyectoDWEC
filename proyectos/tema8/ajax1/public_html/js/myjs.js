@@ -11,6 +11,8 @@ $(function () {
         if (this.readyState == 4 && this.status == 200) {
             var ciclos = this.responseText;
             var arrayCiclos = JSON.parse(ciclos);
+            console.log(ciclos);
+            console.log(arrayCiclos);
             for (var i = 0; i < arrayCiclos.length; i++) {
                 $("#modulo").append("<option value=" + arrayCiclos[i] + ">" + arrayCiclos[i] + "</option>");
             }
@@ -54,7 +56,9 @@ $(function () {
         }
     }
     function mostrarAsignaturas() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status == 200) {if ($("#hideAsig").children() !== 0) {
+                $("#hideAsig").empty();
+            }
             if ($("#hideAsig").children() !== 0) {
                 $("#hideAsig").empty();
             }

@@ -55,14 +55,13 @@ window.addEventListener('load',cargar,false);
 
 
 //$(function () {
-////    $.ajax({url:'fecha.php',type:'post',async:true,data:'numero=1', success: function(respuesta){
-////            alert(respuesta);
-////    } });
+//    $.ajax({url: 'fecha.php', type: 'post', async: true, data: 'numero=1', success: function (respuesta) {
+//            alert(respuesta);
+//        }});
 //
-////$('#respuesta').load("fecha.php",{numero:1});
-////
-////$.get('fecha2.php?numero=4',function(respuesta) {
-////        alert(respuesta);
-////    });
+//    $('#respuesta').load("fecha.php", {numero: 1});
 //
-//});
+//    $.get('fecha2.php?numero=4', function (respuesta) {
+//        alert(respuesta);
+//    });
+//})
