@@ -6,12 +6,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/estilos.css">
         <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/myJs.js"></script>
+        <script src="js/myJs.js"></script>  <style>
+            div{
+                display:none;
+            }
+
+        </style>
+
     </head>
     <body>
-        <button id="activar">Activar</button>
-        <input type="text" id="n1">
-        <input type="text" id="n2">
-        <div id="resultados"></div>
+        <h1>Matricula de asignaturas</h1>
+        <button id="conectar">Conectar AJAX - IndexDB</button>
+        <button id="mostrar" >Mostrar</button>
+        <button id="insertar">Insertar</button>
+        <table>
+            <thead><td>ID</td><td>Nombre</td><td>Modificar</td><td>Borrar</td>
+            <tbody></tbody>
+        </table>
+
+        <div id = "forminsert">
+
+            <p>Id <input type = "text" id="id" ></p>
+            <p>Nombre <input type = "text" id="nombre" ></p>
+            <button id="binsert">Insertar</button>
+
+        </div>
+
+        <div class="resultado">
+
+        </div>
+        <div id = "formmod">
+
+            <table border ="1">
+                <thead>
+                    <tr>
+                        <th id="thcodigo">Id</th>
+                        <th id="thdesc">Nombre</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <p>Id <input disabled type = "text" id="idm" ></p>
+            <p>Nombre <input type = "text" id="nombrem" ></p>
+            <button id="bmod">Modificar</button>
+
+        </div>
     </body>
 </html>
